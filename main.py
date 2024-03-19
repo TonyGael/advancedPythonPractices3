@@ -1,0 +1,40 @@
+# secuencias
+
+# def mygenerator(n):
+#     for x in range(n):
+#         yield x**3
+
+
+# values = mygenerator(9000000)
+#
+# print(next(values))
+# print(next(values))
+# print(next(values))
+# print(next(values))
+# print(next(values))
+# print(next(values))
+
+# import sys
+
+# values = mygenerator(20)
+# print(sys.getsizeof(values))
+# for x in values:
+#     print(x)
+
+def infinite_sequence(): # controled by yield
+    result = 1
+    while True:
+        yield result
+        result *= 5
+
+
+values = infinite_sequence()
+
+# print(next(values))
+# print(next(values))
+# print(next(values))
+# print(next(values))
+# print(next(values))
+
+for x in values:
+    print(x)
